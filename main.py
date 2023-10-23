@@ -73,12 +73,12 @@ def compare_sort(sizes=[5, 10, 100, 200, 500, 1000, 2000, 3000, 4000, 5000]):
         # create list in ascending order 
         mylist = list(range(size))
         # shuffles list if needed
-        #random.shuffle(mylist)
+        random.shuffle(mylist)
         result.append([
             len(mylist),
-           #time_search(qsort_fixed_pivot, mylist),
+           time_search(qsort_fixed_pivot, mylist),
             time_search(qsort_random_pivot, mylist),
-            #time_search(sel_sort,mylist),
+            time_search(sel_sort,mylist),
             time_search(tim_sort,mylist)
         ])
     return result
